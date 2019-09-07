@@ -3,7 +3,7 @@ author: 'Josa Gesell <josa@gesell.me>'
 description: 'Build and Rease Docker Images'
 runs:
   using: 'docker'
-  image: 'docker://josa/gh-action-docker:latest'
+  image: 'docker://josa/gh-action-docker:0.1.0'
 branding:
   icon: 'refresh-ccw'
   color: 'blue'

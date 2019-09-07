@@ -1,0 +1,10 @@
+name: 'Docker (latest)'
+author: 'Josa Gesell <josa@gesell.me>'
+description: 'Build and Rease Docker Images'
+runs:
+  using: 'docker'
+  image: 'docker://josa/gh-action-docker:latest'
+branding:
+  icon: 'refresh-ccw'
+  color: 'blue'
+

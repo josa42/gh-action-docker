@@ -1,0 +1,30 @@
+name: Master
+on:
+  push:
+    branches: [ master ]
+    tags: [ '*' ]
+jobs:
+  test:
+    name: Test and Push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: ./build
+        with:
+          image: 'josa/gh-action-docker'
+          docker_username: '${{ secrets.DOCKER_USERNAME }}'
+          docker_password: '${{ secrets.DOCKER_PASSWORD }}'
+
+      # - name: 'Test: POST (ssl)'
+      #   uses: ./build
+      #   with: { url: 'https://httpbin.org/post' }
+      # - uses: actions/docker/login@master
+      #   env:
+      #     DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      # - uses: actions/docker/cli@master
+      #   with: { args: 'build -t josa/gh-action-docker:$(echo latest) .' }
+      # - uses: actions/docker/cli@master
+      #   with: { args: 'push josa/gh-action-docker:latest' }
+
+

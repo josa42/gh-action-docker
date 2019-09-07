@@ -1,0 +1,10 @@
+name: 'Docker (build)'
+author: 'Josa Gesell <josa@gesell.me>'
+description: 'Build and Rease Docker Images'
+runs:
+  using: 'docker'
+  image: '../Dockerfile'
+branding:
+  icon: 'refresh-ccw'
+  color: 'blue'
+
